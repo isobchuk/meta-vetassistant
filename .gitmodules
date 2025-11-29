@@ -1,0 +1,3 @@
+[submodule "recipes-vetassistant/vetassistant/files/vetassistant"]
+	path = recipes-vetassistant/vetassistant/files/vetassistant
+	url = git@github.com:isobchuk/vetassistant.git
