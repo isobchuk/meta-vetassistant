@@ -1,0 +1,15 @@
+[Unit]
+Description=VetAssistant Qt Application
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/root
+Environment=QT_QPA_FONTDIR=/usr/share/fonts/truetype/
+Environment=QT_QPA_PLATFORM=linuxfb
+ExecStart=/usr/bin/vetassistant
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
