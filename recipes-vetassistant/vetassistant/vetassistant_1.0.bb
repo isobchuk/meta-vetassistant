@@ -6,7 +6,7 @@ SRC_URI = "file://vetassistant/ \
 
 S = "${WORKDIR}/vetassistant"
 
-DEPENDS += "qtbase qtdeclarative qtquickcontrols2"
+DEPENDS += "qtbase-native qtbase qtdeclarative qtquickcontrols2 sqlite3"
 inherit pkgconfig systemd
 
 do_configure() {
@@ -26,6 +26,8 @@ do_install() {
     # Install QML files
     install -d ${D}${datadir}/vetassistant/gui/qt/qml
     cp -R ${S}/src/gui/qt/qml ${D}${datadir}/vetassistant/gui/qt
+    install -d ${D}${datadir}/vetassistant/db/default
+    cp -R ${S}/resources ${D}${datadir}/vetassistant/db/default
 }
 
 SYSTEMD_SERVICE_${PN} = "vetassistant.service"

@@ -1,0 +1,7 @@
+1. meta-yocto-bsp/wic/beaglebone-yocto.wks: bootloader --append="console=ttyS0,115200 video=HDMI-A-1:1024x600@60"
+
+2. Versions:
+poky - yocto-5.0.11
+meta-openembedded - scarthgap
+meta-qt5 - scarthgap 
+
